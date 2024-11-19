@@ -6,7 +6,7 @@ We see that the white race is stopped considerably more than any other race in M
 ![Traffic Stop Analysis](images/download-1.png)
 
 Hm. Seems just about half of all races recieve a citation. But what about the actual statistics? Let's take a look.
-#Correlation coefficients
+# Correlation coefficients
 
 
 
