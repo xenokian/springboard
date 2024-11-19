@@ -1,5 +1,5 @@
 # Traffic Stop Analysis
-Thanks for checking out my project! This project questions the question of race being correlated with citation issuance. The data is from my home state of Massachusetts. First, let's take a look at the distribution of stops by race. 
+Thanks for checking out my project! This project questions the question of race being correlated with citation issuance and traffic stops. The data is from my home state of Massachusetts. First, let's take a look at the distribution of stops by race. 
 ![Traffic Stop Analysis](images/download.png)
 
 We see that the white race is stopped considerably more than any other race in Massachusetts. Ok, but that is not sufficient information. Let's take a look at citation issuance by race. 
@@ -24,7 +24,9 @@ Before choosing a model, I must preprocess the data and get it ready for modelin
 # Modeling 
 Let's make some models! I made two models as the modeling rubric for this project said 2 to 3, and after experimenting with 3 models, I found only 2 models were necessary. I tried using an SVM but it took more than a day to run and it was still going! So, I decided on logistic regression and random forest. I chose logistic regression because it is great for feature importance, and random forest for those pesky non-linear relationships. Let's take a look at how these models performed. Logistic regression landed a ROC AUC score of 0.669. Let's see at which features the model deemed most important. 
 ![Traffic Stop Analysis](images/download-3.png)
-We see here it found that not wearing a seatbelt and speeding were highly influential in citation issuance, further disproving my null hypothesis. That seems swell, but what about random forest? The random forest model landed a ROC AUC score of 0.680, much better than logistic regression. What features did random forest find most important? Let's see. 
+We see here it found that not wearing a seatbelt and speeding were highly influential in the reason for stops. That seems swell, but what about random forest? The random forest model landed a ROC AUC score of 0.680, much better than logistic regression. What features did random forest find most important? Let's see. 
+![Traffic Stop Analysis](images/download-4.png)
+We see it found the most important features were unknown or speeding. I left in the unknown reason for stops as that only further begs the question of race being correlated with citation issuance! This stat here seems to prove the null hypothesis, however we see that both models agree on speeding as a large reason for stopping. After these scores and analysis, I decided that my final model will be random forest. It performed better than logistic regression, as shown here:
 
 
 
